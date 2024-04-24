@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://bswist240yr62"]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_r0c07"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vtvyo"]
+size = Vector2(1152, 101)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_r0c07")
+
+[node name="Floor" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+position = Vector2(576, 597.5)
+shape = SubResource("RectangleShape2D_vtvyo")
+
+[node name="ColorRect" type="ColorRect" parent="Floor"]
+offset_top = 547.0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.462745, 0.862745, 0.25098, 1)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
